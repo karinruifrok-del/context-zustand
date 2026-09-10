@@ -1,3 +1,10 @@
+import Parent from "./components/parent";
+import { NameValueProvider } from "./context/NameValueContext";
+
 export default function App() {
-  return <h1>HOME</h1>
+  return (
+    <NameValueProvider>
+      <Parent />
+    </NameValueProvider>
+  )
 }
