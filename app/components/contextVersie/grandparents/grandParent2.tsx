@@ -1,7 +1,7 @@
 "use client"
 
 import { useContext } from "react"
-import { NameValueContext } from "../../context/NameValueContext"
+import { NameValueContext } from "../../../context/NameValueContext"
 
 export default function GrandParent2() {
     const { car, value, setCar, setValue } = useContext(NameValueContext);
