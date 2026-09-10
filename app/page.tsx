@@ -23,7 +23,14 @@ const Column = styled.div`
 export default function App() {
   return (
     <NameValueProvider>
+      <Row>
+        <Column>
           <ParentContextVersion />
+        </Column>
+        <Column>
+          <ParentZustackVersion />
+        </Column>
+      </Row>
     </NameValueProvider>
   )
 }
