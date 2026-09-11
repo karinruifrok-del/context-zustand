@@ -1,20 +1,22 @@
-"use client"
+'use client'
 
-import { createContext, useContext, useState } from "react"
+import { createContext, useState } from 'react'
+import { NameValueType } from '../types/nameValueType'
 
-export const NameValueContext = createContext({
-  car: 'Ferrari',
+export const NameValueContext = createContext<NameValueType>({
+  name: 'Bananas',
   value: 10,
-  setCar: (_car: string) => {},
+  setName: (_name: string) => {},
   setValue: (_value: number) => {},
 })
 
+export function NameValueProvider({ children }: { children: React.ReactNode }) {
+  const [name, setName] = useState('Bananas')
+  const [value, setValue] = useState(10)
 
-export function NameValueProvider({ children }: {children: React.ReactNode }) {
-    const [car, setCar] = useState('Ferrari')
-    const [value, setValue] = useState(10)
-
-    return (
-        <NameValueContext.Provider value={{ car, value, setCar, setValue }}>{children}</NameValueContext.Provider>
-    )
+  return (
+    <NameValueContext.Provider value={{ name, value, setName, setValue }}>
+      {children}
+    </NameValueContext.Provider>
+  )
 }
