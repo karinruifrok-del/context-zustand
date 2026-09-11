@@ -1,3 +1,12 @@
+import Grandparent1 from '../grandparents/Grandparent1ZV'
+import Grandparent2 from '../grandparents/Grandparent2ZV'
+
 export default function ParentZustackVersion() {
-    return <h1>Zustack Version (parent)</h1>
+  return (
+    <>
+      <h1>Zustack Version (parent)</h1>
+      <Grandparent1 />
+      <Grandparent2 />
+    </>
+  )
 }
