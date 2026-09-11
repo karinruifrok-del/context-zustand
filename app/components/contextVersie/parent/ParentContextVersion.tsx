@@ -1,5 +1,5 @@
-import GrandParent1 from "../grandparents/grandParent1";
-import GrandParent2 from "../grandparents/grandParent2";
+import GrandParent1 from '../grandparents/grandParent1CV'
+import GrandParent2 from '../grandparents/grandParent2CV'
 
 export default function ParentContextVersion() {
   return (
