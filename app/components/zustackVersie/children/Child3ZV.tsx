@@ -1,6 +1,7 @@
 'use client'
 
 import { useUserAgeStore } from '@/app/store/useUserAgeStore'
+import { ValueDisplay } from '../../ui/StyledUI'
 
 export default function Child3() {
   const user = useUserAgeStore((state) => state.user)
@@ -8,8 +9,8 @@ export default function Child3() {
   console.log(`Child3 re-renderd, user: ${user}`)
   console.log(`Child3 re-renderd, age: ${age}`)
   return (
-    <p>
-      User: {user}, Age: {age}
-    </p>
+    <ValueDisplay>
+      {user} is {age} years old.
+    </ValueDisplay>
   )
 }

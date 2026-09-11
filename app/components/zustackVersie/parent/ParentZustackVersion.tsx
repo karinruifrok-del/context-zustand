@@ -4,7 +4,7 @@ import Grandparent2 from '../grandparents/Grandparent2ZV'
 export default function ParentZustackVersion() {
   return (
     <>
-      <h1>Zustack Version (parent)</h1>
+      <h1>Zustack</h1>
       <Grandparent1 />
       <Grandparent2 />
     </>

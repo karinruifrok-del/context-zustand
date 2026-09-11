@@ -1,6 +1,7 @@
-"use client"
+'use client'
 
-import { useUserAgeStore } from "@/app/store/useUserAgeStore"
+import { useUserAgeStore } from '@/app/store/useUserAgeStore'
+import { Card } from '../../ui/StyledUI'
 
 export default function Grandparent2() {
   const user = useUserAgeStore((state) => state.user)
@@ -8,9 +9,9 @@ export default function Grandparent2() {
   const setUser = useUserAgeStore((state) => state.setUser)
   const setAge = useUserAgeStore((state) => state.setAge)
 
-return (
-    <div>
-      <h3>Grandparent 2</h3>
+  return (
+    <Card>
+      <h3>Controls</h3>
       <label>
         User:{' '}
         <input
@@ -28,5 +29,6 @@ return (
           onChange={(e) => setAge(Number(e.target.value))}
         />
       </label>
-    </div>
-  )}
+    </Card>
+  )
+}
