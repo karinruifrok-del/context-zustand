@@ -1,6 +1,6 @@
 import ParentContextVersion from './components/contextVersie/parent/ParentContextVersion'
 import ParentZustackVersion from './components/zustackVersie/parent/ParentZustackVersion'
-import { NameValueProvider } from './context/NameValueContext'
+import { UserAgeProvider } from './context/UserAgeContext'
 import styled from 'styled-components'
 
 const Row = styled.div`
@@ -22,7 +22,7 @@ const Column = styled.div`
 
 export default function App() {
   return (
-    <NameValueProvider>
+    <UserAgeProvider>
       <Row>
         <Column>
           <ParentContextVersion />
@@ -31,6 +31,6 @@ export default function App() {
           <ParentZustackVersion />
         </Column>
       </Row>
-    </NameValueProvider>
+    </UserAgeProvider>
   )
 }

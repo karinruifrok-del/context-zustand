@@ -1,15 +1,15 @@
 'use client'
 
-import { useNameValueStore } from '@/app/store/useNameValueStore'
+import { useUserAgeStore } from '@/app/store/useUserAgeStore'
 
 export default function Child3() {
-  const name = useNameValueStore((state) => state.name)
-  const value = useNameValueStore((state) => state.value)
-  console.log(`Child3 re-renderd, name: ${name}`)
-  console.log(`Child3 re-renderd, value: ${value}`)
+  const user = useUserAgeStore((state) => state.user)
+  const age = useUserAgeStore((state) => state.age)
+  console.log(`Child3 re-renderd, user: ${user}`)
+  console.log(`Child3 re-renderd, age: ${age}`)
   return (
     <p>
-      Name: {name}, Value: {value}
+      User: {user}, Age: {age}
     </p>
   )
 }

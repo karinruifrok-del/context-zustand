@@ -1,31 +1,31 @@
 "use client"
 
-import { useNameValueStore } from "@/app/store/useNameValueStore"
+import { useUserAgeStore } from "@/app/store/useUserAgeStore"
 
 export default function Grandparent2() {
-  const name = useNameValueStore((state) => state.name)
-  const value = useNameValueStore((state) => state.value)
-  const setName = useNameValueStore((state) => state.setName)
-  const setValue = useNameValueStore((state) => state.setValue)
+  const user = useUserAgeStore((state) => state.user)
+  const age = useUserAgeStore((state) => state.age)
+  const setUser = useUserAgeStore((state) => state.setUser)
+  const setAge = useUserAgeStore((state) => state.setAge)
 
 return (
     <div>
       <h3>Grandparent 2</h3>
       <label>
-        Name:{' '}
+        User:{' '}
         <input
-          value={name}
+          value={user}
           type="string"
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => setUser(e.target.value)}
         />
       </label>
       <br />
       <label>
-        Value:{' '}
+        Age:{' '}
         <input
-          value={value}
+          value={age}
           type="number"
-          onChange={(e) => setValue(Number(e.target.value))}
+          onChange={(e) => setAge(Number(e.target.value))}
         />
       </label>
     </div>

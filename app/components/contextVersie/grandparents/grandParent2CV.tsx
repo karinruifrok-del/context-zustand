@@ -1,29 +1,29 @@
 'use client'
 
 import { useContext } from 'react'
-import { NameValueContext } from '../../../context/NameValueContext'
+import { UserAgeContext } from '../../../context/UserAgeContext'
 
 export default function GrandParent2() {
-  const { name, value, setName, setValue } = useContext(NameValueContext)
+  const { user, age, setUser, setAge } = useContext(UserAgeContext)
 
   return (
     <div>
       <h3>Grandparent 2</h3>
       <label>
-        Name:{' '}
+        User:{' '}
         <input
-          value={name}
+          value={user}
           type="string"
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => setUser(e.target.value)}
         />
       </label>
       <br />
       <label>
-        Value:{' '}
+        Age:{' '}
         <input
-          value={value}
+          value={age}
           type="number"
-          onChange={(e) => setValue(Number(e.target.value))}
+          onChange={(e) => setAge(Number(e.target.value))}
         />
       </label>
     </div>
