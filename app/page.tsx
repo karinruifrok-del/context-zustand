@@ -1,6 +1,6 @@
-import ParentContextVersion from "./components/contextVersie/parent/ParentContextVersion";
-import ParentZustackVersion from "./components/zustackVersie/parent/ParentZustackVersion";
-import { NameValueProvider } from "./context/NameValueContext";
+import ParentContextVersion from './components/contextVersie/parent/ParentContextVersion'
+import ParentZustackVersion from './components/zustackVersie/parent/ParentZustackVersion'
+import { NameValueProvider } from './context/NameValueContext'
 import styled from 'styled-components'
 
 const Row = styled.div`

@@ -1,9 +1,7 @@
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
-    <html
-      lang="en"
-    >
+    <html lang="en">
       <body>{children}</body>
     </html>
-  );
+  )
 }
